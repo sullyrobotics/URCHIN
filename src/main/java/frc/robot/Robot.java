@@ -27,6 +27,7 @@ public class Robot extends TimedRobot {
   SparkMax M_R1;
   SparkMax M_L2;
   SparkMax M_R2;
+  SparkMax M_RL;
   //----------------------
 
   //ID---------------------
@@ -34,10 +35,7 @@ public class Robot extends TimedRobot {
   int R1Id = 2;
   int L2Id = 3;
   int R2Id = 4;
-  int ARMId = 5;
-  int ARM2Id =6;
-  int FRLLId = 7;
-  int BRLLId = 8;
+  int RLId = 5;
  //----------------------
   int CurrentLimit = 50;
 
@@ -78,6 +76,9 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     URCHIN.tankDrive(-driveController.getLeftY(), -driveController.getRightY());
+
+    if (opController1.getAButton()) { M_RL.set(1);
+    }
   }
 
   
