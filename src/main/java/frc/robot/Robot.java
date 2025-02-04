@@ -28,6 +28,7 @@ public class Robot extends TimedRobot {
   SparkMax M_L2;
   SparkMax M_R2;
   SparkMax M_RL;
+  SparkMAx M_CL;
   //----------------------
 
   //ID---------------------
@@ -36,7 +37,10 @@ public class Robot extends TimedRobot {
   int L2Id = 3;
   int R2Id = 4;
   int RLId = 5;
+  int CLId = 6;3
  //----------------------
+
+
   int CurrentLimit = 50;
 
   private XboxController driveController = new XboxController(0);
